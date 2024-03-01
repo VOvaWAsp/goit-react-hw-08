@@ -1,0 +1,16 @@
+.text {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  display: flex;
+  margin: auto;
+  margin-bottom: 10px;
+  border: transparent;
+  background: linear-gradient(90deg, rgba(46, 76, 208, 1) 0%, rgb(165, 121, 207, 1) 100%);
+}
+
+.button:focus .button:hover {
+  background: linear-gradient(rgb(165, 121, 207, 1) 100%, 90deg, rgba(46, 76, 208, 1) 0%);
+}

@@ -1,0 +1,15 @@
+.container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.item {
+  list-style-type: none;
+  margin: 10px;
+  width: 200px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}

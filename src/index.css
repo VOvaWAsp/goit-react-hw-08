@@ -1,0 +1,7 @@
+body {
+  background: rgb(166, 163, 212);
+  background: linear-gradient(90deg, rgba(166, 163, 212, 1) 0%, rgba(0, 212, 255, 1) 100%);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
