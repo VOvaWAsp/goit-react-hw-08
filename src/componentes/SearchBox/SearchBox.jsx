@@ -11,6 +11,7 @@ export default function SearchBox() {
   //   const fsdfsfg = contacts.map(contact => {
   //     return contact.name;
   //   });
+
   const filter = event => dispatch(filterFiltration(event.target.value));
   return (
     <div className={css.container}>

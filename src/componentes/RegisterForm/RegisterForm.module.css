@@ -1,17 +1,17 @@
-.container {
-  display: flex;
-  justify-content: center;
-  width: 650px;
+.register {
+  position: relative;
+  width: 350px;
   padding: 30px;
   height: fit-content;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 15px;
+  z-index: 10;
   backdrop-filter: blur(25px);
   box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.2), -10px -10px 40px rgba(0, 0, 0, 0.2);
 }
 
-.container h2 {
+.register h1 {
   font-size: 1.8rem;
   color: #fff;
   margin-bottom: 40px;
@@ -19,21 +19,22 @@
   text-align: center;
 }
 
-.container form {
+.register form {
   width: 100%;
   height: 100%;
   outline: none;
   border: none;
 }
 
-.container form .inputBox {
+.register form .inputBox {
   width: 100%;
+  position: relative;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
 }
 
-.container form .inputBox input {
+.register form .inputBox input {
   width: 100%;
   border: none;
   padding: 1rem 2.7rem 1rem 1rem;
@@ -41,24 +42,24 @@
   color: #fff;
   background-color: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.4);
-  width: 580px;
+  width: 280px;
 }
 
-.container form .inputBox input::placeholder {
+.register form .inputBox input::placeholder {
   color: #fff;
   font-size: 0.8rem;
   transition: 0.5s ease;
 }
 
-.container form .inputBox input:focus::placeholder {
+.register form .inputBox input:focus::placeholder {
   opacity: 0;
 }
 
-.container form .inputBox input:focus {
+.register form .inputBox input:focus {
   outline: none;
 }
 
-.container form button {
+.register form button {
   width: 100%;
   border: none;
   padding: 1rem 1rem 1rem 2.7rem;
@@ -72,22 +73,11 @@
   font-weight: 600;
 }
 
-.container form button:hover {
+.register form button:hover {
   background-color: #111;
 }
 
 .text {
   display: flex;
   align-items: center;
-  color: white;
-}
-
-.button {
-  margin-top: 15px;
-  border: transparent;
-  background: linear-gradient(90deg, rgba(46, 76, 208, 1) 0%, rgb(165, 121, 207, 1) 100%);
-}
-
-.button:focus .button:hover {
-  background: linear-gradient(rgb(165, 121, 207, 1) 100%, 90deg, rgba(46, 76, 208, 1) 0%);
 }

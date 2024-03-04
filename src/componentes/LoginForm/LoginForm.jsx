@@ -1,16 +1,11 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { useId } from 'react';
 import { useDispatch } from 'react-redux';
-import { register } from '../../redux/auth/operations';
+import { login } from '../../redux/auth/operations';
 import * as yup from 'yup';
-import css from './RegisterForm.module.css';
+import css from './LoginForm.module.css';
 
 const validationFormSchema = yup.object().shape({
-  name: yup
-    .string()
-    .matches(/^[a-zA-ZÀ-ÖÙ-öù-ÿĀ-žḀ-ỿ0-9\s\-\/.]+$/, 'Please enter valid name')
-    .max(40)
-    .required(),
   email: yup
     .string()
     .email()
@@ -22,24 +17,21 @@ const validationFormSchema = yup.object().shape({
     .matches(/[a-zA-Z]/, 'Password can only contain Latin letters.'),
 });
 
-export default function RegisterForm() {
+export default function LoginForm() {
   const dispatch = useDispatch();
-  const nameId = useId();
   const emailId = useId();
   const passwordId = useId();
   return (
-    <div className={css.register}>
+    <div className={css.login}>
       <Formik
         validationSchema={validationFormSchema}
         initialValues={{
-          name: '',
           email: '',
           password: '',
         }}
         onSubmit={(values, actions) => {
           dispatch(
-            register({
-              name: values.name,
+            login({
               email: values.email,
               password: values.password,
             })
@@ -53,14 +45,7 @@ export default function RegisterForm() {
         }}
       >
         <Form>
-          <h1>Register Form</h1>
-          <div className={css.inputBox}>
-            <label className={css.text} htmlFor={nameId}>
-              Name
-            </label>
-            <Field type="text" id={nameId} name="name" />
-            <ErrorMessage name="name" component="span" />
-          </div>
+          <h2>Login Form</h2>
           <div className={css.inputBox}>
             <label className={css.text} htmlFor={emailId}>
               email
